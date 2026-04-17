@@ -35,10 +35,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
+
 
   position: relative;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 /* Moving Grid */
