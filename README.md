@@ -60,7 +60,7 @@ qr-generator/
 ### Option 2: Use Live Version
 
 Open directly in your browser:
- https://saijishnup.github.io/qr-gen/
+ https://saijishnup.github.io/qr-gen
 
 
 
