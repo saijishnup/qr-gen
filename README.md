@@ -90,12 +90,6 @@ This project focuses on:
 
 ---
 
-## Links
-
-* GitHub: https://github.com/saijishnup/qr-gen
-
----
-
 ## License
 
 MIT License
