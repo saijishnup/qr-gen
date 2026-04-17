@@ -35,7 +35,9 @@ qr-generator/
 
 ---
 
-##  How to Run
+## How to Run
+
+### Option 1: Run Locally
 
 1. Clone the repository:
 
@@ -45,12 +47,22 @@ qr-generator/
 
 2. Open the project folder
 
-3. Run:
+3. Open the file:
 
    ```bash
-   qr.html
+   index.html
    ```
-( open in browser)
+
+4. Open it in your browser
+
+---
+
+### Option 2: Use Live Version
+
+Open directly in your browser:
+ https://saijishnup.github.io/qr-gen/
+
+
 
 ---
 
