@@ -36,10 +36,20 @@ downloadBtn.addEventListener("click", () => {
   const img = qrContainer.querySelector("img");
   if (!img) return;
 
-  const link = document.createElement("a");
-  link.href = img.src;
-  link.download = "qr.png";
-  link.click();
+  fetch(img.src)
+    .then(res => res.blob())
+    .then(blob => {
+      const url = URL.createObjectURL(blob);
+
+      const a = document.createElement("a");
+      a.href = url;
+      a.download = "qr.png";
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+
+      URL.revokeObjectURL(url);
+    });
 });
 
 /* Copy */
