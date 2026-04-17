@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <meta name="description" content="Lightweight QR Generator - fast, minimal">
+  <meta name="theme-color" content="#0f0f10">
+
+  <title>QR Generator</title>
+
+  <link rel="icon" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="theme.css">
+
+  <!-- QR Library -->
+  <script src="libs/qrcode.min.js"></script>
+</head>
+
+<body class="light">
+  <div class="container">
+
+    <header>
+      <h1>QR Generator</h1>
+      <button id="themeToggle" class="theme-btn">☀️</button>
+    </header>
+
+    <main>
+      <textarea 
+        id="input"
+        placeholder="Paste link or type text..."
+        autofocus
+      ></textarea>
+
+      <!-- QR container -->
+      <div id="qr" class="hidden"></div>
+
+      <div class="actions">
+        <button id="downloadBtn">Download PNG</button>
+        <button id="copyBtn">Copy</button>
+      </div>
+    </main>
+
+    <footer>
+      <p>© 2026 QR Gen @saijishnup | All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.github.com/saijishnup/qr-gen" target="_blank">GitHub</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script src="logic.js"></script>
+</body>
+</html>

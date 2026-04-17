@@ -1,0 +1,13 @@
+qr-generator/
+│
+├── qr.html
+├── theme.css
+├── logic.js
+├── assets/
+│   └── favicon.ico 
+│
+├── libs/
+│   └── qrcode.min.js
+│
+├── README.md
+└── LICENSE
