@@ -102,12 +102,6 @@ This project focuses on:
 
 ---
 
-## License
-
-MIT License
-
----
-
 ## © Copyright
 
 © 2026 QR Generator @saijishnup. All rights reserved.
