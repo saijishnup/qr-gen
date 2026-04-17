@@ -1,4 +1,4 @@
-```javascript
+
 const input = document.getElementById("input");
 const qrContainer = document.getElementById("qr");
 const downloadBtn = document.getElementById("downloadBtn");
@@ -90,4 +90,4 @@ themeToggle.addEventListener("click", () => {
   themeToggle.textContent =
     document.body.classList.contains("light") ? "🌙" : "☀️";
 });
-```
+
