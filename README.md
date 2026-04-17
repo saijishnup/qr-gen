@@ -19,7 +19,7 @@ No signup. No tracking. Just instant QR generation.
 ```
 qr-generator/
 │
-├── qr.html          # Main HTML file
+├── index.html          # Main HTML file
 ├── theme.css        # Styling (UI + themes)
 ├── logic.js         # Core functionality
 │
