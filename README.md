@@ -54,7 +54,7 @@ qr-generator/
 
 ---
 
-## 🛠 Tech Stack
+## Tech Stack
 
 * HTML5
 * CSS3 (Glass UI + animations)
