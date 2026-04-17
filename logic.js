@@ -1,3 +1,4 @@
+```javascript
 const input = document.getElementById("input");
 const qrContainer = document.getElementById("qr");
 const downloadBtn = document.getElementById("downloadBtn");
@@ -22,7 +23,7 @@ function generateQR(text) {
   });
 }
 
-/* Input */
+/* Input Listener */
 input.addEventListener("input", () => {
   generateQR(input.value);
 
@@ -31,14 +32,14 @@ input.addEventListener("input", () => {
   input.style.height = input.scrollHeight + "px";
 });
 
-/* Download */
+/* Download QR (FIXED for mobile) */
 downloadBtn.addEventListener("click", () => {
+  const canvas = qrContainer.querySelector("canvas");
   const img = qrContainer.querySelector("img");
-  if (!img) return;
 
-  fetch(img.src)
-    .then(res => res.blob())
-    .then(blob => {
+  // Prefer canvas (best for mobile)
+  if (canvas) {
+    canvas.toBlob((blob) => {
       const url = URL.createObjectURL(blob);
 
       const a = document.createElement("a");
@@ -50,20 +51,43 @@ downloadBtn.addEventListener("click", () => {
 
       URL.revokeObjectURL(url);
     });
+  } 
+  // Fallback if only img exists
+  else if (img) {
+    fetch(img.src)
+      .then(res => res.blob())
+      .then(blob => {
+        const url = URL.createObjectURL(blob);
+
+        const a = document.createElement("a");
+        a.href = url;
+        a.download = "qr.png";
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+
+        URL.revokeObjectURL(url);
+      });
+  }
 });
 
-/* Copy */
+/* Copy Text */
 copyBtn.addEventListener("click", () => {
   if (!input.value.trim()) return;
 
   navigator.clipboard.writeText(input.value);
+
   copyBtn.textContent = "Copied!";
-  setTimeout(() => copyBtn.textContent = "Copy", 1000);
+  setTimeout(() => {
+    copyBtn.textContent = "Copy";
+  }, 1000);
 });
 
-/* Theme */
+/* Theme Toggle */
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("light");
+
   themeToggle.textContent =
     document.body.classList.contains("light") ? "🌙" : "☀️";
 });
+```
